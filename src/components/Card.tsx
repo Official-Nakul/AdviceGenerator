@@ -7,16 +7,16 @@ interface slip {
 }
 
 interface prop {
-  data: slip;
+  api_data: slip;
   handleOnClick: () => {};
 }
 
-const Card = ({ data, handleOnClick }: prop) => {
-  console.log(data.advice);
+const Card = ({ api_data, handleOnClick }: prop) => {
+  console.log(api_data.advice);
   return (
     <div className={styles.container}>
-      <p className={styles.adviceID}>ADVICE # {data.id}</p>
-      <q>{data.advice}</q>
+      <p className={styles.adviceID}>ADVICE # {api_data.id}</p>
+      <q>{api_data.advice}</q>
       <img className={styles.seprator} src={seprator} alt="" />
       <div className={styles.btn} onClick={handleOnClick}>
         <img src={dice} alt="" />

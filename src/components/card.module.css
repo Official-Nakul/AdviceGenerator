@@ -43,12 +43,21 @@ p {
   justify-content: center;
   align-items: center;
   background-color: hsl(150, 100%, 66%);
-  transition: all 500ms ease-in-out;
+  /* transition: all 500ms ease-in-out; */
 }
 .seprator {
   margin: 1.5em 0em 1.5em 0em;
 }
 .btn:hover {
-  filter: drop-shadow(2px 2px 15px hsl(150, 100%, 66%));
+  animation: glow 1s ease-in-out infinite alternate;
+  /* filter: drop-shadow(2px 2px 15px hsl(150, 100%, 66%)); */
   cursor: pointer;
+}
+@keyframes glow {
+  from {
+    filter: drop-shadow(2px 2px 5px hsl(150, 100%, 66%));
+  }
+  to {
+    filter: drop-shadow(2px 2px 15px hsl(150, 100%, 66%));
+  }
 }

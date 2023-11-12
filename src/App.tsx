@@ -3,11 +3,12 @@ import Card from "./components/Card";
 import "./App.css";
 function App() {
   const apiUrl = "https://api.adviceslip.com/advice";
-  const [advice, setAdvice] = useState(JSON);
+  const [advice, setAdvice] = useState(Object);
   const getData = async () => {
     const response = await fetch(apiUrl);
     const data = await response.json();
     setAdvice(data.slip);
+    console.log(data);
   };
 
   useEffect(() => {
@@ -16,7 +17,7 @@ function App() {
 
   return (
     <>
-      <Card data={advice} handleOnClick={getData} />
+      <Card api_data={advice} handleOnClick={getData} />
     </>
   );
 }
