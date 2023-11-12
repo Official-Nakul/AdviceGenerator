@@ -61,3 +61,28 @@ p {
     filter: drop-shadow(2px 2px 15px hsl(150, 100%, 66%));
   }
 }
+
+@media (width<=400px) {
+  .container {
+    width: 20em;
+    height: 15em;
+  }
+  .btn {
+    top: 13.5em;
+  }
+  .seprator {
+    content: url("src/assets/pattern-divider-mobile.svg");
+  }
+}
+@media (400px<=width<=570px) {
+  .container {
+    width: 25em;
+    height: 15em;
+  }
+  .btn {
+    top: 13.5em;
+  }
+  .seprator {
+    content: url("src/assets/pattern-divider-mobile.svg");
+  }
+}
